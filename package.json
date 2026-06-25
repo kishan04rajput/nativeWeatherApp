@@ -5,8 +5,8 @@
   "scripts": {
     "start": "expo start -c",
     "reset-project": "node ./scripts/reset-project.js",
-    "update-project": "npx expo install expo@latest; npm run sanitize-project",
     "sanitize-project": "npm i; npx expo install --fix; npm audit fix; npx expo-doctor",
+    "update-project": "npx expo install expo@latest; npm run sanitize-project",
     "prebuild": "expo prebuild --clean",
     "android": "rm -rf android; npm run sanitize-project; expo run:android --no-build-cache --device",
     "ios": "rm -rf ios; npm run sanitize-project; expo run:ios --no-build-cache --device",
