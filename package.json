@@ -11,7 +11,12 @@
     "android": "rm -rf android; npm run sanitize-project; expo run:android --no-build-cache --device",
     "ios": "rm -rf ios; npm run sanitize-project; expo run:ios --no-build-cache --device",
     "web": "expo start --web",
-    "lint": "expo lint"
+    "lint": "expo lint",
+    "epil": "eas build --profile preview --platform ios --local",
+    "epal": "eas build --profile preview --platform android --local",
+    "edil": "eas build --profile development --platform ios --local",
+    "edal": "eas build --profile development --platform android --local",
+    "create-production-builds-local": "eas build --profile production --platform android --local; eas build --profile production --platform ios --local"
   },
   "dependencies": {
     "@expo/ui": "~56.0.18",
